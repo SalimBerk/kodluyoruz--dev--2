@@ -1,7 +1,7 @@
 function newElement() {
   const task = document.querySelector("#task");
   let message = task.value;
-  let liste = document.querySelector("#list");
+  let list = document.querySelector("#list");
 
   let li = document.createElement("li");
   li.setAttribute("class", "list-group-item list-group-item-action");
@@ -12,7 +12,7 @@ function newElement() {
 
   li.innerHTML = message;
   if (message){
-    liste.appendChild(li);
+    list.appendChild(li);
   }else{
     const alert_dom=document.querySelector("#alert");
     const alert=`<div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -34,6 +34,6 @@ function newElement() {
   li.appendChild(span);
 
   span.addEventListener("click", function () {
-    liste.removeChild(li);
+    list.removeChild(li);
   });
 }
